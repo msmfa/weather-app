@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
+  margin: auto;
+  outline: none;
+}
+
+#container {
+  margin-top: 5rem;
+  display: flex;
+  width: 50vw;
+  height: 50vh;
+  flex-direction: column;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+
+.description {
+  text-transform: capitalize;
+}
+
+#input {
+  width: 200px;
+}
+#submit-button {
+  display: flex;
+  margin-top: 10px;
+  width: 50px;
+  height: 20px;
+  border-radius: 5px;
+  justify-content: center;
+}
+
+.temp {
+  font-size: 40px;
+  padding-left: 15px;
+}

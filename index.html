@@ -3,16 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
+
     <title>Weather App</title>
   </head>
   <body>
-    <header>Weather App</header>
-    <input id="input" type="text" placeholder="Enter your City..." />
-    <button id="submit-button" type="submit"></button>
-    <div class="location"></div>
-    <div class="temp"></div>
-    <div class="description"></div>
+    <main id="container">
+      <div class="inputs">
+        <input id="input" type="text" placeholder="Enter your City..." />
+        <div class="div"></div>
+        <button id="submit-button" type="submit">Submit</button>
+      </div>
+      <div class="temp"></div>
+      <div class="location"></div>
+      <div class="description"></div>
+    </main>
   </body>
   <script src="main.js"></script>
 </html>

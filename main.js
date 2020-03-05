@@ -23,10 +23,8 @@ async function getWeather(userCity) {
 }
 
 function display(data) {
-  console.log(data);
   const forecast = data.weather.map(item => item.description);
-
-  let temps = Math.round(data.main.temp);
+  const temps = Math.round(data.main.temp);
   userLocation.textContent = data.name;
   temperature.textContent = `${temps}°`;
   description.textContent = forecast;
