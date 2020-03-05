@@ -1,7 +1,7 @@
 //API
 const inputField = document.getElementById("input");
 const button = document.getElementById("submit-button");
-const display = document.querySelector(".display");
+const temperature = document.querySelector(".temp");
 
 button.addEventListener("click", getData);
 
@@ -16,5 +16,11 @@ async function getWeather(userCity) {
     { mode: "cors" }
   );
   const data = await response.json();
-  display.textContent = data.main.temp;
+  display(data);
+}
+
+function display(data) {
+  let temps = Math.round(data.main.temp);
+  console.log(temps);
+  temperature.textContent = `${temps}°`;
 }
