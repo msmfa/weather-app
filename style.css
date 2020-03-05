@@ -48,8 +48,12 @@ body {
 .temp {
   font-size: 60px;
   padding-left: 15px;
+  color: green;
 }
 .location {
   margin: 0 auto;
   font-size: 20px;
+}
+#submit-button:hover {
+  background-color: rgb(228, 228, 228);
 }
