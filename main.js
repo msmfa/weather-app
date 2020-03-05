@@ -2,11 +2,14 @@
 const inputField = document.getElementById("input");
 const button = document.getElementById("submit-button");
 const temperature = document.querySelector(".temp");
+const userLocation = document.querySelector(".location");
+const description = document.querySelector(".description");
 
 button.addEventListener("click", getData);
 
 function getData() {
   let userCity = inputField.value;
+  inputField.value = "";
   getWeather(userCity);
 }
 
@@ -20,7 +23,11 @@ async function getWeather(userCity) {
 }
 
 function display(data) {
+  console.log(data);
+  const forecast = data.weather.map(item => item.description);
+
   let temps = Math.round(data.main.temp);
-  console.log(temps);
+  userLocation.textContent = data.name;
   temperature.textContent = `${temps}°`;
+  description.textContent = forecast;
 }
