@@ -24,9 +24,56 @@ async function getWeather(userCity) {
 }
 
 function display(data) {
+  console.log(data);
   const forecast = data.weather.map(item => item.description);
   const temps = Math.round(data.main.temp);
+  const feelsLike = Math.round(data.main.feels_like);
+  console.log(feelsLike);
+
   userLocation.textContent = data.name;
   temperature.textContent = `${temps}°`;
   description.textContent = forecast;
 }
+
+//Date
+
+const output = document.querySelector(".display");
+const date = document.querySelector(".date");
+
+function displayDay() {
+  const today = new Date();
+  const day = today.getDay();
+  const daylist = ["Sun", "Mon", "Tues", "Wed ", "Thurs", "Fri", "Sat"];
+  return daylist[day];
+}
+function displayMonth() {
+  const month = new Date();
+  const monthNumber = month.getMonth();
+  const months = [
+    "Jan",
+    "Feb",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec"
+  ];
+  return months[monthNumber];
+}
+
+function getDigit() {
+  const date = new Date();
+  const number = String(date.getDate());
+  return number;
+}
+
+function displayCurrentdate() {
+  date.textContent = displayDay() + " " + getDigit() + ", " + displayMonth();
+}
+
+displayCurrentdate();
