@@ -8,14 +8,15 @@
 }
 body {
   display: flex;
-  padding-top: 6em;
+  padding-top: 2em;
   justify-content: space-evenly;
 }
 
 #container {
+  border: 1px solid grey;
   padding: 2rem;
   width: 50vw;
-  height: 50vh;
+  height: 30em;
   text-align: center;
   display: none;
 }

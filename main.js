@@ -4,6 +4,7 @@ const button = document.getElementById("submit-button");
 const temperature = document.querySelector(".temp");
 const userLocation = document.querySelector(".location");
 const description = document.querySelector(".description");
+const feelsLikeDiv = document.querySelector(".feels-like");
 const container = document.getElementById("container");
 button.addEventListener("click", getData);
 
@@ -13,6 +14,8 @@ function getData() {
   getWeather(userCity);
   container.style.display = "block";
 }
+//this doeesnt seem to work when uploading to github pages
+//I think the async await has to change to then statements
 
 async function getWeather(userCity) {
   const response = await fetch(
@@ -28,8 +31,8 @@ function display(data) {
   const forecast = data.weather.map(item => item.description);
   const temps = Math.round(data.main.temp);
   const feelsLike = Math.round(data.main.feels_like);
-  console.log(feelsLike);
 
+  feelsLikeDiv.textContent = `feels like: ${feelsLike}°`;
   userLocation.textContent = data.name;
   temperature.textContent = `${temps}°`;
   description.textContent = forecast;
