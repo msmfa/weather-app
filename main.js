@@ -80,3 +80,18 @@ function displayCurrentdate() {
 }
 
 displayCurrentdate();
+
+//typewriter
+
+let i = 0;
+let text = "Enter your city below";
+let time = 50;
+
+function typeWritterText() {
+  if (i < text.length) {
+    document.getElementById("opening-title").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typeWritterText, time);
+  }
+}
+typeWritterText();
