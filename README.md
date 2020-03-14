@@ -8,7 +8,7 @@ https://msmfa.github.io/weather-app/
 
 ## App in Action
 
-![](IMG/weather-screenshotapp.png)
+![](IMG/screenshot-weatherapp.png)
 
 ## Build Tools & Languages
 
