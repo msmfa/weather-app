@@ -6,62 +6,52 @@
   font-family: "Source Sans Pro", sans-serif;
   outline: none;
 }
-body {
-  display: flex;
-  justify-content: space-between;
-  padding: 4em 10em;
+
+.inputs {
+  text-align: center;
+  margin: 2em;
+}
+#input {
+  width: 150px;
+  height: 35px;
+  padding: 0.5em;
+  margin: 1em;
+}
+
+#submit-button {
+  width: 70px;
+  height: 35px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  font-size: 1rem;
 }
 
 #container {
-  border: 1px solid grey;
-  border-radius: 4px;
-  padding: 2rem;
-  height: 30em;
   text-align: center;
+  padding: 2em;
+  margin: auto;
+  width: 20em;
+  height: 25em;
+  background-color: rgb(230, 241, 247);
+  border: 1px solid rgb(166, 201, 253);
+  border-radius: 6px;
   display: none;
 }
 
-.description {
-  text-transform: capitalize;
-  margin: 0 auto 0 auto;
-}
-
-#input {
-  display: flex;
-  width: 240px;
-  height: 35px;
-  padding-left: 6px;
-  margin-top: 2rem;
-  border: 1px solid rgb(189, 189, 189);
-  border-radius: 5px;
-}
-#submit-button {
-  display: flex;
-  margin-top: 10px;
-  width: 50px;
-  height: 20px;
-  border-radius: 5px;
-  justify-content: center;
-}
-
 .temp {
-  padding-left: 40px;
-  font-size: 160px;
-  color: green;
+  font-size: 5em;
+  margin: 0.3em;
+  padding-left: 0.3em;
+  color: rgb(21, 143, 21);
 }
 .location {
-  margin: 0;
-  font-size: 20px;
-}
-#submit-button:hover {
-  background-color: rgb(228, 228, 228);
+  font-size: 1.5em;
+  margin: 0.4em;
 }
 
-.line {
-  margin-top: 1.5rem;
-  border: 1px solid rgb(228, 228, 228);
-}
-
-#today-title {
-  font-size: 28px;
+.description,
+.feels-like {
+  text-transform: capitalize;
+  padding: 0.1em;
+  color: rgb(97, 97, 97);
 }
