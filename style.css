@@ -8,14 +8,14 @@
 }
 body {
   display: flex;
-  padding-top: 2em;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  padding: 4em 10em;
 }
 
 #container {
   border: 1px solid grey;
+  border-radius: 4px;
   padding: 2rem;
-  width: 50vw;
   height: 30em;
   text-align: center;
   display: none;

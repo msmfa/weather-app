@@ -19,7 +19,7 @@ function getData() {
 
 async function getWeather(userCity) {
   const response = await fetch(
-    `http://api.openweathermap.org/data/2.5/weather?q=${userCity}&units=metric&appid=686435d234791159bf2ce459d109f5f8`,
+    `https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=${userCity}&units=metric&appid=686435d234791159bf2ce459d109f5f8`,
     { mode: "cors" }
   );
   const data = await response.json();
